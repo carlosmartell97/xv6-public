@@ -33,7 +33,7 @@ int getppid(void);                        // get parent's Process ID
 int signal(int, sighandler_t);
 int killsignal(int, int);
           //   pid signum
-int signal(int, void(*func)(void));       // nothing comes in as parameter, nothings comes out
+// int signal(int, void(*func)(void));       // nothing comes in as parameter, nothings comes out
 
 // ulib.c
 int stat(char*, struct stat*);
