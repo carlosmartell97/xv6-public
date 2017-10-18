@@ -27,13 +27,18 @@ int shutdown(void);
 int reboot(void);
 int set_priority(int);
 int shmem(int);
-char * shmat(int);
+char* shmat(int);
 int shdemat(int);
+int getppid(void);                        // get parent's Process ID
+int signal(int, sighandler_t);
+int killsignal(int, int);
+          //   pid signum
+int signal(int, void(*func)(void));       // nothing comes in as parameter, nothings comes out
 
 // ulib.c
 int stat(char*, struct stat*);
 char* strcpy(char*, char*);
-void *memmove(void*, void*, int);
+void* memmove(void*, void*, int);
 char* strchr(const char*, char c);
 int strcmp(const char*, const char*);
 void printf(int, char*, ...);
