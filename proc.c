@@ -581,7 +581,7 @@ int sys_killsignal(void) {
 
    //Default option finish the process
    signum -=1;
-   if((int)p->signals[signum] == -1) kill(p->pid);
+   if((int)p->signals[signum] == 0) kill(p->pid);
  //Else execute the function
  //Move the stack to the next position
  p->tf->esp -= 4;                       // decrease to make a space in stack
