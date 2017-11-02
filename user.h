@@ -32,6 +32,7 @@ int shdemat(int);
 int getppid(void);                        // get parent's Process ID
 int signal(int, sighandler_t);
 int killsignal(int, int);
+int chmod(char *, char *);
           //   pid signum
 // int signal(int, void(*func)(void));       // nothing comes in as parameter, nothings comes out
 
